@@ -71,7 +71,7 @@ spec:
           resources:
 {{ toYaml .Values.resources | indent 12 }}
           env:
-{{- if .Values.secrets.htpasswd }}
+{{- if .Values.htpasswd }}
             - name: REGISTRY_AUTH
               value: "htpasswd"
             - name: REGISTRY_AUTH_HTPASSWD_REALM
@@ -157,7 +157,7 @@ spec:
               value: "true"
 {{- end }}
           volumeMounts:
-{{- if .Values.secrets.htpasswd }}
+{{- if .Values.htpasswd }}
             - name: auth
               mountPath: /auth
               readOnly: true
@@ -182,7 +182,7 @@ spec:
 {{ toYaml .Values.tolerations | indent 8 }}
 {{- end }}
       volumes:
-{{- if .Values.secrets.htpasswd }}
+{{- if .Values.htpasswd }}
         - name: auth
           secret:
             secretName: {{ template "docker-registry.fullname" . }}-secret

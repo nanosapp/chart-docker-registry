@@ -75,6 +75,7 @@ their default values.
 | `ingress.path`              | Ingress service path                                                                       | `/`             |
 | `ingress.hosts`             | Ingress hostnames                                                                          | `[]`            |
 | `ingress.tls`               | Ingress TLS configuration (YAML)                                                           | `[]`            |
+| `htpasswd`                  | Use htpasswd                                                                               | `false`         |
 
 Specify each parameter using the `--set key=value[,key=value]` argument to
 `helm install`.

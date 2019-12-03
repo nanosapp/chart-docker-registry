@@ -125,3 +125,5 @@ podDisruptionBudget: {}
 nodeSelector: {}
 
 tolerations: []
+
+htpasswd: false
