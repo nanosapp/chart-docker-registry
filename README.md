@@ -1,5 +1,7 @@
 # Docker Registry Helm Chart
 
+Fork of [stable/docker-registry](https://github.com/helm/charts/tree/master/stable/docker-registry) that makes the deployment more secure.  
+
 This directory contains a Kubernetes chart to deploy a private Docker Registry.
 
 ## Prerequisites Details
